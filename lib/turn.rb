@@ -1,7 +1,7 @@
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  
+  valid_move?(board,input)
 end
 
 
@@ -20,4 +20,24 @@ end
 
 def move(array,index,value = "X")
   array[index] = value
+end
+
+# code your #valid_move? method here
+def valid_move?(board,index)
+  index_new = index.to_i
+  index_new.between?(1,9) && !position_taken?(board,index)
+end
+
+# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def position_taken?(board,index)
+  index_new = index.to_i
+  if board[index_new] == " "
+    false
+  elsif board[index_new] == ""
+    false
+  elsif board[index_new] == nil
+    false
+  elsif board[index_new] == "X" || board[index_new] == "O"
+    true
+  end
 end
