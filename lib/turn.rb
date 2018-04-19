@@ -5,6 +5,7 @@ def turn(board)
   if valid_move?(board,converted_input)
     #make move
     move(board,converted_input)
+    display_board(board)
   else
     #invalid move
     turn(board)
