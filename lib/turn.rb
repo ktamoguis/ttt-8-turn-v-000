@@ -7,7 +7,7 @@ def turn(board)
     move(board,converted_input)
   else
     #invalid move
-    #turn(board)
+    turn(board)
   end
 end
 
