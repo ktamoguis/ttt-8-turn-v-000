@@ -7,6 +7,7 @@ def turn(board)
   else
     #invalid move
     turn(board)
+  end
 end
 
 
